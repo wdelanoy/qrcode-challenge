@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images\favicon-32x32.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <title>QR Code Component</title>
+  <style>
+
+
+    :root {
+      --color-white: hsl(0, 0%, 100%);
+      --color-lightgray: hsl(212, 45%, 89%);
+      --color-bluegray: hsl(220, 15%, 55%);
+      --color-darkblue: hsl(218, 44%, 22%);
+    }
+    
+    body {
+      background: var(--color-lightgray);
+      font-family: 'Outfit', sans-serif;
+      text-align: center;
+      align-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;      
+    }
+    
+    .container {
+      background: white;
+      padding: .75em;
+      max-width: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 10px;
+      box-shadow: 0px 0cap 15px var(--color-darkblue);      
+    }
+    
+    .qr-image > img{
+      max-height: 200px;
+      border-radius: 7px;
+      
+    }
+    .qr-header{
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-darkblue);
+
+    }
+    .qr-text{
+      font-size: 11px;
+      color: var(--color-bluegray);
+      margin-top: .25em;
+      margin-bottom: 1.25em;
+
+    }
+
+    .all-text {
+      padding: 0 .5em;
+    }
+
+    @media screen and (max-width: 640px) {
+      .container {
+        max-width: 310px;
+      }
+
+      .qr-image img {
+        max-height: 310px;
+      }
+
+      .qr-header {
+        font-size: 25px;
+      }
+
+      .qr-text {
+        font-size: 18px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="qr-image"><img src="images\image-qr-code.png" alt="QR code"></div>
+    <h1 class="all-text qr-header">Improve your front-end skills by building projects</h1>
+    <p class="all-text qr-text">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+  </div>
+  
+</body>
+</html>
